@@ -1,11 +1,12 @@
 import requests
 import pprint
 import json
+import secret
 
 class YoutubeCrawler:
 
     def __init__(self):
-        self.key = "AIzaSyDfGrIi4N4kB0nHWe4W6uq2fAya0xvXOoQ"
+        self.key = secret.secretKey
         self.url = "https://www.googleapis.com/youtube/v3/"
 
     def get_popular_video(self, count=10):
