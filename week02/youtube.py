@@ -9,27 +9,13 @@ import secret
 #2. 전달 주소
 # https://www.googleapis.com/youtube/v3/videos
 # django에서 secret KEY 파일을 가져오는 방법
-'''
-secret_file = os.path.join('../secret.json', 'secret.json')
-with open(secret_file) as f:
-    secret = json.loads(f.read())
 
-def get_secret(setting, secret = secret)
-    try:
-        return secret[setting]
-    except KeyError:
-        error_msg = "Set the {} envrionment variable".format(setting)
-        raise ImproperlyConfigured(error_msg)
-
-
-SECRET_KEY = get_secret("SECREY_KEY")
-'''
 url = "https://www.googleapis.com/youtube/v3/videos"
 params = { # get요청 시 전달할 parameter
     #key, value로 구성
-    "key" : secret.secretKey,
-    "id" : "scy4bOferow",
-    "part" : ["snippet", "statistics"],
+    "key": secret.secretKey,
+    "id": "scy4bOferow",
+    "part": ["snippet", "statistics"],
 } #dictionary
 
 # GET Method
